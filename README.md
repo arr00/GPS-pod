@@ -19,7 +19,7 @@ pod 'GPS'
 
 ## Usage
 
-GPS provides an array of static and instance functions. View the documentation for a detailed description of all the GPS library functions.
+GPS provides an array of static and instance functions. View the [documentation](http://arr00.github.io/GPS-pod) for a detailed description of all the GPS library functions.
 
 ## Author
 

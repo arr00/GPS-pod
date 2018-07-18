@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GPS'
-  s.version          = '0.1.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'GPS provides an library for performing essential offline tasks involving GPS coordinates and earthly triginometric formulas.'
 
 # This description is used to generate tags and improve search results.
