@@ -1,0 +1,1788 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>GPS Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/GPS" class="dashAnchor"></a>
+    <a title="GPS Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">GPS Docs</a> (84% documented)</p>
+        <p class="header-right"><a href="https://github.com/arr00/GPS-pod"><img src="../img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right"><a href="dash-feed://http%3A%2F%2Farr00%2Egithub%2Eio%2Fdocsets%2FGPS%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">GPS Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        GPS Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/GPS.html">GPS</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GPS/SunZenith.html">– SunZenith</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>GPS</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">GPS</span></code></pre>
+
+                </div>
+              </div>
+            <p>GPS provides an library for many calculations involving GPS and earth.</p>
+
+<p>A <code>GPS</code> instance contains a latitude and longitude and is used for performing operations in the GPS library. <code>GPS</code> instances have a few instance methods. All instance methods use public static methods for the calculations.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Properties"></a>
+                <a name="//apple_ref/swift/Section/Properties" class="dashAnchor"></a>
+                <a href="#/Properties">
+                  <h3 class="section-name">Properties</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3GPSAAC8latitudeSdvp"></a>
+                    <a name="//apple_ref/swift/Property/latitude" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3GPSAAC8latitudeSdvp">latitude</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">latitude</span><span class="p">:</span> <span class="kt">Double</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/arr00/GPS-pod/tree/master/GPS/Classes/GPS.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3GPSAAC9longitudeSdvp"></a>
+                    <a name="//apple_ref/swift/Property/longitude" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3GPSAAC9longitudeSdvp">longitude</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">longitude</span><span class="p">:</span> <span class="kt">Double</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/arr00/GPS-pod/tree/master/GPS/Classes/GPS.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Initializers"></a>
+                <a name="//apple_ref/swift/Section/Initializers" class="dashAnchor"></a>
+                <a href="#/Initializers">
+                  <h3 class="section-name">Initializers</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3GPSAACABSd8latitude_Sd9longitudetcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(latitude:longitude:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3GPSAACABSd8latitude_Sd9longitudetcfc">init(latitude:longitude:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initiazlizes a new <code>GPS</code> object</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">latitude</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">longitude</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>latitude</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Latitude of the GPS coordinate</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>longitude</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Longitude of the GPS coordinate</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/arr00/GPS-pod/tree/master/GPS/Classes/GPS.swift#L21-L24">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3GPSAACABSC22CLLocationCoordinate2DV18locationCoordinate_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(locationCoordinate:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3GPSAACABSC22CLLocationCoordinate2DV18locationCoordinate_tcfc">init(locationCoordinate:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initiazlies a new <code>GPS</code> object</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">locationCoordinate</span><span class="p">:</span> <span class="kt">CLLocationCoordinate2D</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>locationCoordinate</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A <code>CLLocationCoordinate2D</code> to create the <code>GPS</code> object from.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/arr00/GPS-pod/tree/master/GPS/Classes/GPS.swift#L28-L31">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Instance%20Methods"></a>
+                <a name="//apple_ref/swift/Section/Instance Methods" class="dashAnchor"></a>
+                <a href="#/Instance%20Methods">
+                  <h3 class="section-name">Instance Methods</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3GPSAAC25distanceToEquirectangularSdAB3gps_tF"></a>
+                    <a name="//apple_ref/swift/Method/distanceToEquirectangular(gps:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3GPSAAC25distanceToEquirectangularSdAB3gps_tF">distanceToEquirectangular(gps:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Distance to a point using the Equitectangular formula. Units will match planet radius units. Less accurate than Haversine but less time consuming.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">distanceToEquirectangular</span><span class="p">(</span><span class="nv">gps</span><span class="p">:</span> <span class="kt">GPS</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Double</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>gps</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Distance to this <code>GPS</code> coordinate</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Distance in units matching <code><a href="../Classes/GPS.html#/s:3GPSAAC12planetRadiusSdvpZ">GPS.planetRadius</a></code> units.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/arr00/GPS-pod/tree/master/GPS/Classes/GPS.swift#L37-L39">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3GPSAAC19distanceToHaversineSdAB3gps_tF"></a>
+                    <a name="//apple_ref/swift/Method/distanceToHaversine(gps:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3GPSAAC19distanceToHaversineSdAB3gps_tF">distanceToHaversine(gps:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Distance to a point using the Haversine formula. More accurate than equirectangular but more time consuming.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">distanceToHaversine</span><span class="p">(</span><span class="nv">gps</span><span class="p">:</span> <span class="kt">GPS</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Double</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>gps</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Distance to this <code>GPS</code> coordinate</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Distance in units matching <code><a href="../Classes/GPS.html#/s:3GPSAAC12planetRadiusSdvpZ">GPS.planetRadius</a></code> units.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/arr00/GPS-pod/tree/master/GPS/Classes/GPS.swift#L44-L46">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3GPSAAC18oppositeCoordinateAByF"></a>
+                    <a name="//apple_ref/swift/Method/oppositeCoordinate()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3GPSAAC18oppositeCoordinateAByF">oppositeCoordinate()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the GPS coordinates on the other side of the world from the instance <code>GPS</code>. (If you were to dig a hole perfectly straight this is where you would end up)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">oppositeCoordinate</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">GPS</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code>GPS</code> coordinate referring to the opposite side of the planet.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/arr00/GPS-pod/tree/master/GPS/Classes/GPS.swift#L50-L52">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3GPSAAC11sunriseTime10Foundation4DateVSgAF4date_AB9SunZenithO03sunH0tF"></a>
+                    <a name="//apple_ref/swift/Method/sunriseTime(date:sunZenith:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3GPSAAC11sunriseTime10Foundation4DateVSgAF4date_AB9SunZenithO03sunH0tF">sunriseTime(date:sunZenith:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Calculate the time of sunrise at the instance <code>GPS</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">sunriseTime</span><span class="p">(</span><span class="nv">date</span><span class="p">:</span> <span class="kt">Date</span><span class="p">,</span> <span class="nv">sunZenith</span><span class="p">:</span> <span class="kt"><a href="../Classes/GPS/SunZenith.html">SunZenith</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Date</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>date</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Requested <code>Date</code> for sunrise time. (UTC)</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>sunZenith</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Requested <code><a href="../Classes/GPS/SunZenith.html">GPS.SunZenith</a></code> for sunrise time</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>Date</code> of the sunrise time (UTC). Null if no sunrise on this day</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/arr00/GPS-pod/tree/master/GPS/Classes/GPS.swift#L57-L59">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3GPSAAC10sunsetTime10Foundation4DateVSgAF4date_AB9SunZenithO03sunH0tF"></a>
+                    <a name="//apple_ref/swift/Method/sunsetTime(date:sunZenith:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3GPSAAC10sunsetTime10Foundation4DateVSgAF4date_AB9SunZenithO03sunH0tF">sunsetTime(date:sunZenith:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Calculate the time of sunset at the instance <code>GPS</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">sunsetTime</span><span class="p">(</span><span class="nv">date</span><span class="p">:</span> <span class="kt">Date</span><span class="p">,</span> <span class="nv">sunZenith</span><span class="p">:</span> <span class="kt"><a href="../Classes/GPS/SunZenith.html">SunZenith</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Date</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>date</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Requested <code>Date</code> for sunset time. (UTC)</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>sunZenith</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Requested <code><a href="../Classes/GPS/SunZenith.html">GPS.SunZenith</a></code> for sunset time</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>Date</code> of the sunset time (UTC). Null if no sunset on the day</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/arr00/GPS-pod/tree/master/GPS/Classes/GPS.swift#L64-L66">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3GPSAAC11dayDurationSd10Foundation4DateV4date_AB9SunZenithO03sunH0tF"></a>
+                    <a name="//apple_ref/swift/Method/dayDuration(date:sunZenith:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3GPSAAC11dayDurationSd10Foundation4DateV4date_AB9SunZenithO03sunH0tF">dayDuration(date:sunZenith:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Calculate the duration of the day at the instance <code>GPS</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">dayDuration</span><span class="p">(</span><span class="nv">date</span><span class="p">:</span> <span class="kt">Date</span><span class="p">,</span> <span class="nv">sunZenith</span><span class="p">:</span> <span class="kt"><a href="../Classes/GPS/SunZenith.html">SunZenith</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Double</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>date</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The requested <code>Date</code> for day duration</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>sunZenith</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The requested <code><a href="../Classes/GPS/SunZenith.html">GPS.SunZenith</a></code> for calculating sunrise and sunset and the difference.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Day duration in seconds. 0 if no sunrise or no sunset on this day.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/arr00/GPS-pod/tree/master/GPS/Classes/GPS.swift#L71-L73">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3GPSAAC9headingToSdAB3gps_tF"></a>
+                    <a name="//apple_ref/swift/Method/headingTo(gps:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3GPSAAC9headingToSdAB3gps_tF">headingTo(gps:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Calculate the heading to another <code>GPS</code></p>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    Headings are not calculated over the poles.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">headingTo</span><span class="p">(</span><span class="nv">gps</span><span class="p">:</span> <span class="kt">GPS</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Double</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>gps</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>GPS</code> to find the heading to.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The heading to the given <code>GPS</code> in degrees. (between 0 and 360)</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/arr00/GPS-pod/tree/master/GPS/Classes/GPS.swift#L78-L80">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Static%20Vars"></a>
+                <a name="//apple_ref/swift/Section/Static Vars" class="dashAnchor"></a>
+                <a href="#/Static%20Vars">
+                  <h3 class="section-name">Static Vars</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3GPSAAC12MAX_LATITUDESdvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/MAX_LATITUDE" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3GPSAAC12MAX_LATITUDESdvpZ">MAX_LATITUDE</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">MAX_LATITUDE</span><span class="p">:</span> <span class="kt">Double</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/arr00/GPS-pod/tree/master/GPS/Classes/GPS.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3GPSAAC12MIN_LATITUDESdvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/MIN_LATITUDE" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3GPSAAC12MIN_LATITUDESdvpZ">MIN_LATITUDE</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">MIN_LATITUDE</span><span class="p">:</span> <span class="kt">Double</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/arr00/GPS-pod/tree/master/GPS/Classes/GPS.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3GPSAAC13MIN_LONGITUDESdvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/MIN_LONGITUDE" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3GPSAAC13MIN_LONGITUDESdvpZ">MIN_LONGITUDE</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">MIN_LONGITUDE</span><span class="p">:</span> <span class="kt">Double</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/arr00/GPS-pod/tree/master/GPS/Classes/GPS.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3GPSAAC13MAX_LONGITUDESdvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/MAX_LONGITUDE" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3GPSAAC13MAX_LONGITUDESdvpZ">MAX_LONGITUDE</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">MAX_LONGITUDE</span><span class="p">:</span> <span class="kt">Double</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/arr00/GPS-pod/tree/master/GPS/Classes/GPS.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3GPSAAC12EARTH_RADIUSSdvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/EARTH_RADIUS" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3GPSAAC12EARTH_RADIUSSdvpZ">EARTH_RADIUS</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Radius of Earth (Miles)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">EARTH_RADIUS</span><span class="p">:</span> <span class="kt">Double</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/arr00/GPS-pod/tree/master/GPS/Classes/GPS.swift#L91">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3GPSAAC19EARTH_RADIUS_METRICSdvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/EARTH_RADIUS_METRIC" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3GPSAAC19EARTH_RADIUS_METRICSdvpZ">EARTH_RADIUS_METRIC</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Radius of Earth (Kilometers)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">EARTH_RADIUS_METRIC</span><span class="p">:</span> <span class="kt">Double</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/arr00/GPS-pod/tree/master/GPS/Classes/GPS.swift#L93">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3GPSAAC11MOON_RADIUSSdvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/MOON_RADIUS" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3GPSAAC11MOON_RADIUSSdvpZ">MOON_RADIUS</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Radius of Moon (Miles)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">MOON_RADIUS</span><span class="p">:</span> <span class="kt">Double</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/arr00/GPS-pod/tree/master/GPS/Classes/GPS.swift#L95">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3GPSAAC18MOON_RADIUS_METRICSdvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/MOON_RADIUS_METRIC" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3GPSAAC18MOON_RADIUS_METRICSdvpZ">MOON_RADIUS_METRIC</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Radius of Moon (Kilometers)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">MOON_RADIUS_METRIC</span><span class="p">:</span> <span class="kt">Double</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/arr00/GPS-pod/tree/master/GPS/Classes/GPS.swift#L97">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3GPSAAC11MARS_RADIUSSdvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/MARS_RADIUS" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3GPSAAC11MARS_RADIUSSdvpZ">MARS_RADIUS</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Radius of Mars (Miles)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">MARS_RADIUS</span><span class="p">:</span> <span class="kt">Double</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/arr00/GPS-pod/tree/master/GPS/Classes/GPS.swift#L99">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3GPSAAC18MARS_RADIUS_METRICSdvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/MARS_RADIUS_METRIC" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3GPSAAC18MARS_RADIUS_METRICSdvpZ">MARS_RADIUS_METRIC</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Radius of Mars (Kilometers)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">MARS_RADIUS_METRIC</span><span class="p">:</span> <span class="kt">Double</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/arr00/GPS-pod/tree/master/GPS/Classes/GPS.swift#L101">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3GPSAAC12planetRadiusSdvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/planetRadius" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3GPSAAC12planetRadiusSdvpZ">planetRadius</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Planet Radius used for calculations. Defaults to radius of Earth in Miles.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">planetRadius</span><span class="p">:</span> <span class="kt">Double</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/arr00/GPS-pod/tree/master/GPS/Classes/GPS.swift#L103">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Static%20Functions"></a>
+                <a name="//apple_ref/swift/Section/Static Functions" class="dashAnchor"></a>
+                <a href="#/Static%20Functions">
+                  <h3 class="section-name">Static Functions</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3GPSAAC24distanceBetweenHaversineSdAB1f_AB1stFZ"></a>
+                    <a name="//apple_ref/swift/Method/distanceBetweenHaversine(f:s:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3GPSAAC24distanceBetweenHaversineSdAB1f_AB1stFZ">distanceBetweenHaversine(f:s:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Distance to a point using the Haversine formula. More accurate than equirectangular but more time consuming.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">distanceBetweenHaversine</span><span class="p">(</span><span class="nv">f</span><span class="p">:</span> <span class="kt">GPS</span><span class="p">,</span> <span class="nv">s</span><span class="p">:</span> <span class="kt">GPS</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Double</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>f</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>First <code>GPS</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>s</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Second <code>GPS</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Distance from f to s in units matching <code><a href="../Classes/GPS.html#/s:3GPSAAC12planetRadiusSdvpZ">GPS.planetRadius</a></code></p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/arr00/GPS-pod/tree/master/GPS/Classes/GPS.swift#L111-L121">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3GPSAAC30distanceBetweenEquirectangularSdAB1f_AB1stFZ"></a>
+                    <a name="//apple_ref/swift/Method/distanceBetweenEquirectangular(f:s:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3GPSAAC30distanceBetweenEquirectangularSdAB1f_AB1stFZ">distanceBetweenEquirectangular(f:s:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Distance to a point using the Equirectangular formula. More less than Haversine but less time consuming.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">distanceBetweenEquirectangular</span><span class="p">(</span><span class="nv">f</span><span class="p">:</span> <span class="kt">GPS</span><span class="p">,</span> <span class="nv">s</span><span class="p">:</span> <span class="kt">GPS</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Double</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>f</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>First <code>GPS</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>s</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Second <code>GPS</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Distance from f to s in units matching <code><a href="../Classes/GPS.html#/s:3GPSAAC12planetRadiusSdvpZ">GPS.planetRadius</a></code></p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/arr00/GPS-pod/tree/master/GPS/Classes/GPS.swift#L141-L150">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3GPSAAC25headingBetweenCoordinatesSdAB1f_AB1stFZ"></a>
+                    <a name="//apple_ref/swift/Method/headingBetweenCoordinates(f:s:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3GPSAAC25headingBetweenCoordinatesSdAB1f_AB1stFZ">headingBetweenCoordinates(f:s:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Calculate the heading between two <code>GPS</code></p>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    Headings are not calculated over the poles.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">headingBetweenCoordinates</span><span class="p">(</span><span class="nv">f</span><span class="p">:</span> <span class="kt">GPS</span><span class="p">,</span> <span class="nv">s</span><span class="p">:</span> <span class="kt">GPS</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Double</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>f</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>First <code>GPS</code> (heading from)</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>s</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Second <code>GPS</code> (heading to)</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The heading to the given <code>GPS</code> in degrees. (between 0 and 360)</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/arr00/GPS-pod/tree/master/GPS/Classes/GPS.swift#L167-L232">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3GPSAAC18oppositeCoordinateA2B3gps_tFZ"></a>
+                    <a name="//apple_ref/swift/Method/oppositeCoordinate(gps:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3GPSAAC18oppositeCoordinateA2B3gps_tFZ">oppositeCoordinate(gps:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>GPS coordinates on the other side of the world. (If you were to dig a hole perfectly straight this is where you would end up)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">oppositeCoordinate</span><span class="p">(</span><span class="nv">gps</span><span class="p">:</span> <span class="kt">GPS</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">GPS</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>gps</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>GPS</code> to operate with</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>GPS</code> of opposite coordinate</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/arr00/GPS-pod/tree/master/GPS/Classes/GPS.swift#L237-L239">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3GPSAAC21toDegreesMinuteSecondSd7degrees_Sd7minutesSd7secondstSd10coordinate_tFZ"></a>
+                    <a name="//apple_ref/swift/Method/toDegreesMinuteSecond(coordinate:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3GPSAAC21toDegreesMinuteSecondSd7degrees_Sd7minutesSd7secondstSd10coordinate_tFZ">toDegreesMinuteSecond(coordinate:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Convert decimal format coordinates to degrees, minutes, seconds</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">toDegreesMinuteSecond</span><span class="p">(</span><span class="nv">coordinate</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="nv">degrees</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">minutes</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">seconds</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>coordinate</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Decimal version of coordinate</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Tuple containing degrees minutes and seconds</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/arr00/GPS-pod/tree/master/GPS/Classes/GPS.swift#L244-L250">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3GPSAAC9toDecimalS2d7degrees_Sd7minutesSd7secondstFZ"></a>
+                    <a name="//apple_ref/swift/Method/toDecimal(degrees:minutes:seconds:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3GPSAAC9toDecimalS2d7degrees_Sd7minutesSd7secondstFZ">toDecimal(degrees:minutes:seconds:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Convert degrees minutes and seconds to decimal format</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">toDecimal</span><span class="p">(</span><span class="nv">degrees</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">minutes</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">seconds</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Double</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>degrees</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Degrees of coordinate to convert</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>minutes</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Minutes of coordinate to convert</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>seconds</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Seconds of coordinate to convert</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Double representing decimal value of coordinate</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/arr00/GPS-pod/tree/master/GPS/Classes/GPS.swift#L256-L258">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3GPSAAC17distanceToHorizonS2d8atHeight_tFZ"></a>
+                    <a name="//apple_ref/swift/Method/distanceToHorizon(atHeight:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3GPSAAC17distanceToHorizonS2d8atHeight_tFZ">distanceToHorizon(atHeight:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Calculates the distance to the horizon. Doesn&rsquo;t take refraction into account</p>
+<div class="aside aside-precondition">
+    <p class="aside-title">Precondition</p>
+    Planet radius must be in miles
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">distanceToHorizon</span><span class="p">(</span><span class="nv">atHeight</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Double</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>atHeight</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Height in feet</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Distance to the horizon (miles)</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/arr00/GPS-pod/tree/master/GPS/Classes/GPS.swift#L263-L265">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3GPSAAC23distanceToHorizonMetricS2d8atHeight_tFZ"></a>
+                    <a name="//apple_ref/swift/Method/distanceToHorizonMetric(atHeight:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3GPSAAC23distanceToHorizonMetricS2d8atHeight_tFZ">distanceToHorizonMetric(atHeight:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Calculates the distance to the horizon. Doesn&rsquo;t take refraction into account</p>
+<div class="aside aside-precondition">
+    <p class="aside-title">Precondition</p>
+    Planet radius must be in kilometers
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">distanceToHorizonMetric</span><span class="p">(</span><span class="nv">atHeight</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Double</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>atHeight</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Height in meters</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/arr00/GPS-pod/tree/master/GPS/Classes/GPS.swift#L269-L271">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3GPSAAC10sunsetTime10Foundation4DateVSgAB3gps_AF4dateAB9SunZenithO03sunI0tFZ"></a>
+                    <a name="//apple_ref/swift/Method/sunsetTime(gps:date:sunZenith:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3GPSAAC10sunsetTime10Foundation4DateVSgAB3gps_AF4dateAB9SunZenithO03sunI0tFZ">sunsetTime(gps:date:sunZenith:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Calculate the time of sunset</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">sunsetTime</span><span class="p">(</span><span class="nv">gps</span><span class="p">:</span> <span class="kt">GPS</span><span class="p">,</span> <span class="nv">date</span><span class="p">:</span> <span class="kt">Date</span><span class="p">,</span> <span class="nv">sunZenith</span><span class="p">:</span> <span class="kt"><a href="../Classes/GPS/SunZenith.html">SunZenith</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Date</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>gps</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>GPS</code> to find the time of sunset at</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>date</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>Date</code> on which to find the sunset time. (UTC)</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>sunZenith</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code><a href="../Classes/GPS/SunZenith.html">GPS.SunZenith</a></code> to calculate sunset time with. (Zenith specifies the angle of the sun. Official is when it just dips below the horizon)</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Date of sunset (UTC). Null when no sunset on the given date.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/arr00/GPS-pod/tree/master/GPS/Classes/GPS.swift#L277-L279">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3GPSAAC11sunriseTime10Foundation4DateVSgAB3gps_AF4dateAB9SunZenithO03sunI0tFZ"></a>
+                    <a name="//apple_ref/swift/Method/sunriseTime(gps:date:sunZenith:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3GPSAAC11sunriseTime10Foundation4DateVSgAB3gps_AF4dateAB9SunZenithO03sunI0tFZ">sunriseTime(gps:date:sunZenith:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Calculate the time of sunrise</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">sunriseTime</span><span class="p">(</span><span class="nv">gps</span><span class="p">:</span> <span class="kt">GPS</span><span class="p">,</span> <span class="nv">date</span><span class="p">:</span> <span class="kt">Date</span><span class="p">,</span> <span class="nv">sunZenith</span><span class="p">:</span> <span class="kt"><a href="../Classes/GPS/SunZenith.html">SunZenith</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Date</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>gps</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>GPS</code> to find the time of sunrise at</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>date</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>Date</code> on which to find the sunrise time. (UTC)</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>sunZenith</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code><a href="../Classes/GPS/SunZenith.html">GPS.SunZenith</a></code> to calculate sunrise time with. (Zenith specifies the angle of the sun. Official is when it just breaks the horizon)</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Date of sunset (UTC). Null when no sunrise on the given date.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/arr00/GPS-pod/tree/master/GPS/Classes/GPS.swift#L285-L287">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3GPSAAC11dayDurationSdAB3gps_10Foundation4DateV4dateAB9SunZenithO03sunI0tFZ"></a>
+                    <a name="//apple_ref/swift/Method/dayDuration(gps:date:sunZenith:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3GPSAAC11dayDurationSdAB3gps_10Foundation4DateV4dateAB9SunZenithO03sunI0tFZ">dayDuration(gps:date:sunZenith:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the duration of the day in seconds at a given GPS coordinate on a given day with a given sun zenith
+Calculate the duration of the day</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">dayDuration</span><span class="p">(</span><span class="nv">gps</span><span class="p">:</span> <span class="kt">GPS</span><span class="p">,</span> <span class="nv">date</span><span class="p">:</span> <span class="kt">Date</span><span class="p">,</span> <span class="nv">sunZenith</span><span class="p">:</span> <span class="kt"><a href="../Classes/GPS/SunZenith.html">SunZenith</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Double</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>gps</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>GPS</code> to calculate the day duration of</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>date</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>Date</code> on which to calculate day duration (UTC)</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>sunZenith</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code><a href="../Classes/GPS/SunZenith.html">GPS.SunZenith</a></code> to calculate day duration with.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Duration of the day in seconds. 0 if there is no sunset or there is no sunrise.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/arr00/GPS-pod/tree/master/GPS/Classes/GPS.swift#L294-L310">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Enums"></a>
+                <a name="//apple_ref/swift/Section/Enums" class="dashAnchor"></a>
+                <a href="#/Enums">
+                  <h3 class="section-name">Enums</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3GPSAAC9SunZenithO"></a>
+                    <a name="//apple_ref/swift/Enum/SunZenith" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3GPSAAC9SunZenithO">SunZenith</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sun Zenith is used to describe the angle of the sun relative to the surface of earth for calculations involving sun phases.</p>
+
+                        <a href="../Classes/GPS/SunZenith.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">SunZenith</span> <span class="p">:</span> <span class="kt">Double</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/arr00/GPS-pod/tree/master/GPS/Classes/GPS.swift#L437-L446">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://github.com/arr00" target="_blank" rel="external">Aryeh Greenberg</a>. All rights reserved. (Last updated: 2018-07-18)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

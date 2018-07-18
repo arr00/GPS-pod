@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SunZenith Enumeration Reference</title>
+    <link rel="stylesheet" type="text/css" href="../../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../../js/jquery.min.js" defer></script>
+    <script src="../../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Enum/SunZenith" class="dashAnchor"></a>
+    <a title="SunZenith Enumeration Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../../index.html">GPS Docs</a> (84% documented)</p>
+        <p class="header-right"><a href="https://github.com/arr00/GPS-pod"><img src="../../img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right"><a href="dash-feed://http%3A%2F%2Farr00%2Egithub%2Eio%2Fdocsets%2FGPS%2Exml"><img src="../../img/dash.png"/>Install in Dash</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../../index.html">GPS Reference</a>
+        <img id="carat" src="../../img/carat.png" />
+        SunZenith Enumeration Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../../Classes/GPS.html">GPS</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/GPS/SunZenith.html">– SunZenith</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>SunZenith</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">SunZenith</span> <span class="p">:</span> <span class="kt">Double</span></code></pre>
+
+                </div>
+              </div>
+            <p>Sun Zenith is used to describe the angle of the sun relative to the surface of earth for calculations involving sun phases.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3GPSAAC9SunZenithO8officialA2DmF"></a>
+                    <a name="//apple_ref/swift/Element/official" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3GPSAAC9SunZenithO8officialA2DmF">official</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Official zenith for sunrise and sunset. Occurs when the sun goes below or rises above the horizon</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">official</span> <span class="o">=</span> <span class="mf">90.888888</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/arr00/GPS-pod/tree/master/GPS/Classes/GPS.swift#L439">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3GPSAAC9SunZenithO5civilA2DmF"></a>
+                    <a name="//apple_ref/swift/Element/civil" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3GPSAAC9SunZenithO5civilA2DmF">civil</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Occurs when the sun dips 6 degrees below the horizon. During civil twilight, the atmosphere reflects enough light to allow outdoor activities.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">civil</span> <span class="o">=</span> <span class="mi">96</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/arr00/GPS-pod/tree/master/GPS/Classes/GPS.swift#L441">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3GPSAAC9SunZenithO8nauticalA2DmF"></a>
+                    <a name="//apple_ref/swift/Element/nautical" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3GPSAAC9SunZenithO8nauticalA2DmF">nautical</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Occurs when the sun dips 12 degrees below the horizon. The horizon is generally still visable, but many of the brighter stars are visible during nautical twilight (between civil and nautical sunset). This enables navigation by stars at sea and is the namesake for it.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">nautical</span> <span class="o">=</span> <span class="mi">102</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/arr00/GPS-pod/tree/master/GPS/Classes/GPS.swift#L443">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:3GPSAAC9SunZenithO12astronomicalA2DmF"></a>
+                    <a name="//apple_ref/swift/Element/astronomical" class="dashAnchor"></a>
+                    <a class="token" href="#/s:3GPSAAC9SunZenithO12astronomicalA2DmF">astronomical</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Occurs when the sun dips 18 degrees below the horizon. Often hard to differentiate between astronomical twilight and night but astronomers often have difficulty seeing fainter stars during this time. Thus astronomical twilight.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">astronomical</span> <span class="o">=</span> <span class="mi">108</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/arr00/GPS-pod/tree/master/GPS/Classes/GPS.swift#L445">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://github.com/arr00" target="_blank" rel="external">Aryeh Greenberg</a>. All rights reserved. (Last updated: 2018-07-18)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
