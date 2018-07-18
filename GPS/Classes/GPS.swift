@@ -104,7 +104,10 @@ public class GPS {
     
     // MARK: Static Functions
     
-    /// Returns the distance from point f to point s using the haversine formula (Unites will match the planet radius units)
+    /// Distance to a point using the Haversine formula. More accurate than equirectangular but more time consuming.
+    /// - Parameter f: First `GPS`
+    /// - Parameter s: Second `GPS`
+    /// - Returns: Distance from f to s in units matching `GPS.planetRadius`
     public static func distanceBetweenHaversine(f:GPS,s:GPS) -> Double {
         let long1 = degreesToRadians(degrees: f.longitude)
         let long2 = degreesToRadians(degrees: s.longitude)
@@ -131,7 +134,10 @@ public class GPS {
      return c * EARTH_RADIUS_METRIC
      }*/
     
-    /// Returns the distance from point f to point s using the equirectangular formula (signicantly less acurate than haversine but faster). Units will match planet radius units
+    /// Distance to a point using the Equirectangular formula. More less than Haversine but less time consuming.
+    /// - Parameter f: First `GPS`
+    /// - Parameter s: Second `GPS`
+    /// - Returns: Distance from f to s in units matching `GPS.planetRadius`
     public static func distanceBetweenEquirectangular(f:GPS,s:GPS) -> Double {
         //calculate arc length between two line segment tips
         //arc length = radius times angle in radians
@@ -153,7 +159,11 @@ public class GPS {
      return distance
      }*/
     
-    ///Returns the heading that points towards s from f
+    /// Calculate the heading between two `GPS`
+    /// - Parameter f: First `GPS` (heading from)
+    /// - Parameter s: Second `GPS` (heading to)
+    /// - Returns: The heading to the given `GPS` in degrees. (between 0 and 360)
+    /// - warning: Headings are not calculated over the poles.
     public static func headingBetweenCoordinates(f:GPS,s:GPS) -> Double {
         // Find shortest route
         let latitudeTravel = s.latitude - f.latitude
@@ -221,12 +231,16 @@ public class GPS {
         return result
     }
     
-    ///Returns the GPS coordinates on the other side of the world. (If you were to dig a hole perfectly straight this is where you would end up)
+    /// GPS coordinates on the other side of the world. (If you were to dig a hole perfectly straight this is where you would end up)
+    /// - Parameter gps: `GPS` to operate with
+    /// - Returns: `GPS` of opposite coordinate
     public static func oppositeCoordinate(gps:GPS) -> GPS {
         return GPS(latitude: -gps.latitude,longitude: -gps.longitude)
     }
     
-    ///Convert decimal format coordinates to degrees, minutes, seconds
+    /// Convert decimal format coordinates to degrees, minutes, seconds
+    /// - Parameter coordinate: Decimal version of coordinate
+    /// - Returns: Tuple containing degrees minutes and seconds
     public static func toDegreesMinuteSecond(coordinate:Double) -> (degrees:Double,minutes:Double,seconds:Double) {
         let degrees = floor(coordinate)
         let minutes = floor((coordinate - degrees) * 60)
@@ -234,27 +248,49 @@ public class GPS {
         
         return (degrees,minutes,seconds)
     }
-    ///Convert degrees minutes and seconds to decimal format
+    /// Convert degrees minutes and seconds to decimal format
+    /// - Parameter degrees: Degrees of coordinate to convert
+    /// - Parameter minutes: Minutes of coordinate to convert
+    /// - Parameter seconds: Seconds of coordinate to convert
+    /// - Returns: Double representing decimal value of coordinate
     public static func toDecimal(degrees:Double,minutes:Double,seconds:Double) -> Double {
         return degrees + minutes / 60 + seconds / 3600
     }
-    ///The distance to the horizon in miles. Planet radius must be in miles. Doesn't take refraction into account (Height in feet).
+    /// Calculates the distance to the horizon. Doesn't take refraction into account
+    /// - Precondition: Planet radius must be in miles
+    /// - Parameter atHeight: Height in feet
+    /// - Returns: Distance to the horizon (miles)
     public static func distanceToHorizon(atHeight:Double) -> Double {
         return sqrt(2 * planetRadius * atHeight/5280 + pow(atHeight/5280,2))
     }
-    ///Distance to the horizon in kilometers. Planet radius must be in kilometers. Doesn't take refraction into account (Height in meters).
+    /// Calculates the distance to the horizon. Doesn't take refraction into account
+    /// - Precondition: Planet radius must be in kilometers
+    /// - Parameter atHeight: Height in meters
     public static func distanceToHorizonMetric(atHeight:Double) -> Double {
         return sqrt(2 * planetRadius * atHeight/1000 + pow(atHeight/1000,2))
     }
-    /// Calculate the time of sunset on a given date (UTC) and at a given GPS. (Zenith specifies the angle of the sun. Official is when it just dips below the horizon). Date is nil when it doesn't set on the specified day.
+    /// Calculate the time of sunset
+    /// - Parameter gps: `GPS` to find the time of sunset at
+    /// - Parameter date: `Date` on which to find the sunset time. (UTC)
+    /// - Parameter sunZenith: `GPS.SunZenith` to calculate sunset time with. (Zenith specifies the angle of the sun. Official is when it just dips below the horizon)
+    /// - Returns: Date of sunset (UTC). Null when no sunset on the given date.
     public static func sunsetTime(gps:GPS, date:Date, sunZenith:SunZenith) -> Date? {
         return sunriseSunsetHelper(gps: gps, date: date, sunZenith: sunZenith, sunPhase: .sunset)
     }
-    /// Calculate the time of Sunrise on a given date (UTC) and at a given GPS. (Zenith specifies the angle of the sun. Official is when it just breaks the horizon). Date is nil when it doesn't rise on the specified day.
+    /// Calculate the time of sunrise
+    /// - Parameter gps: `GPS` to find the time of sunrise at
+    /// - Parameter date: `Date` on which to find the sunrise time. (UTC)
+    /// - Parameter sunZenith: `GPS.SunZenith` to calculate sunrise time with. (Zenith specifies the angle of the sun. Official is when it just breaks the horizon)
+    /// - Returns: Date of sunset (UTC). Null when no sunrise on the given date.
     public static func sunriseTime(gps:GPS, date:Date, sunZenith:SunZenith) -> Date? {
         return sunriseSunsetHelper(gps: gps, date: date, sunZenith: sunZenith, sunPhase: .sunrise)
     }
     /// Returns the duration of the day in seconds at a given GPS coordinate on a given day with a given sun zenith
+    /// Calculate the duration of the day
+    /// - Parameter gps: `GPS` to calculate the day duration of
+    /// - Parameter date: `Date` on which to calculate day duration (UTC)
+    /// - Parameter sunZenith: `GPS.SunZenith` to calculate day duration with.
+    /// - Returns: Duration of the day in seconds. 0 if there is no sunset or there is no sunrise.
     public static func dayDuration(gps:GPS, date:Date, sunZenith:SunZenith) -> Double {
         let sunrise = GPS.sunriseTime(gps: gps, date: date, sunZenith: sunZenith)
         var sunset = GPS.sunsetTime(gps: gps, date: date, sunZenith: sunZenith)
@@ -411,3 +447,4 @@ public class GPS {
     
     
 }
+
