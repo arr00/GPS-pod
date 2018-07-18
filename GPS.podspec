@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'GPS'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of GPS.'
+  s.summary          = 'GPS provides an API for performing essential offline tasks involving GPS coordinates and earthly triginometric formulas.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,14 +18,15 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+TODO: GPS provides an API for performing essential offline tasks involving GPS coordinates and earthly triginometric formulas. GPS provides formulas for distances, day durations, sunrise sunset, distance to horizon and more.
                        DESC
 
-  s.homepage         = 'https://github.com/arr00/GPS'
+  s.homepage         = 'https://github.com/arr00/GPS-pod'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'arr00' => 'aryeh@myeventmate.com' }
-  s.source           = { :git => 'https://github.com/arr00/GPS.git', :tag => s.version.to_s }
+  s.author           = { 'arr00' => 'aryeh@aryehgreenberg.com' }
+  s.source           = { :git => 'https://github.com/arr00/GPS-pod.git', :tag => s.version.to_s }
+  s.swift_version = '3.0'
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'

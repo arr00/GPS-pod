@@ -339,9 +339,7 @@ public class GPS {
         dateComponents.day = day
         dateComponents.month = month
         dateComponents.year = year
-        Int(floor(ut))
         dateComponents.hour = Int(floor(ut))
-        Int(((ut - floor(ut)) * 60))
         dateComponents.minute = Int(((ut - floor(ut)) * 60))
         
         let resultDate = calendar.date(from: dateComponents)
