@@ -5,11 +5,8 @@
 [![License](https://img.shields.io/cocoapods/l/GPS.svg?style=flat)](https://cocoapods.org/pods/GPS)
 [![Platform](https://img.shields.io/cocoapods/p/GPS.svg?style=flat)](https://cocoapods.org/pods/GPS)
 
-## Example
+GPS is a GPS accessory library written in Swift.
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
 
 ## Installation
 
@@ -19,6 +16,10 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'GPS'
 ```
+
+## Usage
+
+GPS provides an array of static and instance functions. View the documentation for a detailed description of all the GPS library functions.
 
 ## Author
 
