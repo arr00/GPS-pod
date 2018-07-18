@@ -22,7 +22,7 @@ pod 'GPS'
 
 ## Author
 
-arr00, aryeh@myeventmate.com
+arr00, aryeh@aryehgreenberg.com
 
 ## License
 
