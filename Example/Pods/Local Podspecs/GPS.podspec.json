@@ -1,0 +1,22 @@
+{
+  "name": "GPS",
+  "version": "0.1.0",
+  "summary": "A short description of GPS.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/arr00/GPS",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "arr00": "aryeh@myeventmate.com"
+  },
+  "source": {
+    "git": "https://github.com/arr00/GPS.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "GPS/Classes/**/*"
+}
