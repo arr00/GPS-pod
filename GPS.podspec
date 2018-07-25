@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GPS'
-  s.version          = '0.1.2'
-  s.summary          = 'GPS provides an library for performing essential offline tasks involving GPS coordinates and earthly triginometric formulas.'
+  s.version          = '0.1.3'
+  s.summary          = 'GPS provides a library for performing essential offline tasks involving GPS coordinates and earthly triginometric formulas.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-GPS provides an API for performing essential offline tasks involving GPS coordinates and earthly triginometric formulas. GPS provides formulas for distances, day durations, sunrise sunset, distance to horizon and more.
+GPS provides a library for performing essential offline tasks involving GPS coordinates and earthly triginometric formulas. GPS provides formulas for distances, day durations, sunrise sunset, distance to horizon and more.
                        DESC
 
   s.homepage         = 'https://github.com/arr00/GPS-pod'

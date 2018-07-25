@@ -6,15 +6,18 @@ import CoreLocation
 ///
 /// A `GPS` instance contains a latitude and longitude and is used for performing operations in the GPS library. `GPS` instances have a few instance methods. All instance methods use public static methods for the calculations.
 
-
-public class GPS {
+public class GPS: CustomStringConvertible {
+    
+    public var description: String {
+        return "GPS coordinate Latitude: \(latitude), Longitude: \(longitude)"
+    }
     
     // MARK: Properties
     public var latitude:Double
     public var longitude:Double
     
-    
     // MARK: Initializers
+    
     /// Initiazlizes a new `GPS` object
     /// - Parameter latitude: Latitude of the GPS coordinate
     /// - Parameter longitude: Longitude of the GPS coordinate
@@ -31,20 +34,19 @@ public class GPS {
     }
     
     // MARK: Instance Methods
+    
     /// Distance to a point using the Equitectangular formula. Units will match planet radius units. Less accurate than Haversine but less time consuming.
     /// - Parameter gps: Distance to this `GPS` coordinate
     /// - Returns: Distance in units matching `GPS.planetRadius` units.
     public func distanceToEquirectangular(gps:GPS) -> Double {
         return GPS.distanceBetweenEquirectangular(f: self, s: gps)
     }
-    
     /// Distance to a point using the Haversine formula. More accurate than equirectangular but more time consuming.
     /// - Parameter gps: Distance to this `GPS` coordinate
     /// - Returns: Distance in units matching `GPS.planetRadius` units.
     public func distanceToHaversine(gps:GPS) -> Double {
         return GPS.distanceBetweenHaversine(f: self, s: gps)
     }
-    
     /// Returns the GPS coordinates on the other side of the world from the instance `GPS`. (If you were to dig a hole perfectly straight this is where you would end up)
     /// - Returns: A `GPS` coordinate referring to the opposite side of the planet.
     public func oppositeCoordinate() -> GPS {
@@ -71,15 +73,19 @@ public class GPS {
     public func dayDuration(date:Date, sunZenith:SunZenith) -> Double {
         return GPS.dayDuration(gps: self, date: date, sunZenith: sunZenith)
     }
-    /// Calculate the heading to another `GPS`
+    /// Calculate the bearing to another `GPS`
     /// - Parameter gps: `GPS` to find the heading to.
-    /// - Returns: The heading to the given `GPS` in degrees. (between 0 and 360)
-    /// - warning: Headings are not calculated over the poles.
-    public func headingTo(gps:GPS) -> Double {
-        return GPS.headingBetweenCoordinates(f: self, s: gps)
+    /// - Returns: The bearing to the given `GPS` in degrees. (between 0 and 360)
+    public func bearingTo(gps:GPS) -> Double {
+        return GPS.bearingBetweenCoordinates(f: self, s: gps)
     }
-    
-    
+    /// Halfway along the great circle path between two coordinates
+    /// - Parameter f: Origin `GPS`
+    /// - Parameter s: Destination `GPS`
+    /// - Returns: `GPS` of midpoint
+    public func midpointTo(gps:GPS) -> GPS {
+        return GPS.midpointCoordinate(f: self, s: gps)
+    }
     
     // MARK: Static Vars
     
@@ -88,9 +94,9 @@ public class GPS {
     public static let MIN_LONGITUDE:Double = -180.0
     public static let MAX_LONGITUDE:Double = 180.0
     /// Radius of Earth (Miles)
-    public static let EARTH_RADIUS:Double = 3959.0
+    public static let EARTH_RADIUS:Double = 3963.1905919
     /// Radius of Earth (Kilometers)
-    public static let EARTH_RADIUS_METRIC:Double = EARTH_RADIUS * 1.60934
+    public static let EARTH_RADIUS_METRIC:Double = 6378.137
     /// Radius of Moon (Miles)
     public static let MOON_RADIUS:Double = 1079.0
     /// Radius of Moon (Kilometers)
@@ -120,21 +126,7 @@ public class GPS {
         return c * planetRadius
     }
     
-    /*
-     ///Returns the distance from point f to point s in kilometers using the haversine formula
-     public static func distanceBetweenHaversineMetric(f:GPS,s:GPS) -> Double {
-     let long1 = degreesToRadians(degrees: f.longitude)
-     let long2 = degreesToRadians(degrees: s.longitude)
-     let lat1 = degreesToRadians(degrees: f.latitude)
-     let lat2 = degreesToRadians(degrees: s.latitude)
-     let longDifference = abs(long1 - long2)
-     let latDifference = abs(lat1 - lat2)
-     let a = pow(sin(latDifference/2), 2) + cos(lat1) * cos(lat2) * pow(sin(longDifference/2), 2)
-     let c = 2 * atan2(sqrt(a), sqrt(1-a))
-     return c * EARTH_RADIUS_METRIC
-     }*/
-    
-    /// Distance to a point using the Equirectangular formula. More less than Haversine but less time consuming.
+    /// Distance to a point using the Equirectangular formula. More less than Haversine but less time consuming. Can be used accuratly for short distances on earth. When calculating distances on other planets, use equirectangular always.
     /// - Parameter f: First `GPS`
     /// - Parameter s: Second `GPS`
     /// - Returns: Distance from f to s in units matching `GPS.planetRadius`
@@ -148,87 +140,38 @@ public class GPS {
         let distance = planetRadius * arcAsRadians
         return distance
     }
-    /*
-     ///Returns the distance from point f to point s in kilometers using the equirectangular formula (signicantly less acurate than haversine but faster)
-     public static func distanceBetweenEquirectangularMetric(f:GPS,s:GPS) -> Double {
-     let longDifference = abs(f.longitude - s.longitude)
-     let latDifference = abs(f.latitude - s.latitude)
-     let combinedArc = combineArcLengths(arcOne: longDifference, arcTwo: latDifference)
-     let arcAsRadians = degreesToRadians(degrees: combinedArc)
-     let distance = EARTH_RADIUS_METRIC * arcAsRadians
-     return distance
-     }*/
     
-    /// Calculate the heading between two `GPS`
+    /// Calculate the bearing between two `GPS`
     /// - Parameter f: First `GPS` (heading from)
     /// - Parameter s: Second `GPS` (heading to)
-    /// - Returns: The heading to the given `GPS` in degrees. (between 0 and 360)
-    /// - warning: Headings are not calculated over the poles.
-    public static func headingBetweenCoordinates(f:GPS,s:GPS) -> Double {
-        // Find shortest route
-        let latitudeTravel = s.latitude - f.latitude
-        
-        var longitudeTravel = s.longitude - f.longitude
-        if abs(longitudeTravel) > 180 {
-            print("There is a faster route")
-            //Go around the other way
-            let sDistance = 180 - abs(s.longitude)
-            let fDistance = 180 - abs(f.longitude)
-            
-            var totalDistance = sDistance + fDistance
-            if longitudeTravel > 0 {
-                totalDistance *= -1
-            }
-            longitudeTravel = totalDistance
+    /// - Returns: The bearing to the given `GPS` in degrees. (between 0 and 360. 0 is North)
+    public static func bearingBetweenCoordinates(f:GPS,s:GPS) -> Double {
+        let y = mySin(degrees: s.longitude - f.longitude) * myCos(degrees: s.latitude)
+        let x = myCos(degrees: f.latitude) * mySin(degrees: s.latitude) - mySin(degrees: f.latitude) * myCos(degrees: s.latitude) * myCos(degrees: s.longitude - f.longitude)
+        let bearing = atan2(y, x)
+        var finalBearing = radiansToDegrees(radians: bearing) + 360
+        if finalBearing >= 360 {
+            finalBearing -= 360
         }
-        
-        //let totalTravelTraditional = sqrt(pow(latitudeTravel, 2) + pow(longitudeTravel, 2))
-        /*
-         let northPoleLatTravel = (90 - f.latitude) + (90 - s.latitude)
-         let southPoleLatTravel = abs(-90 - f.latitude) + abs(-90 - s.latitude)
-         let minPolarLatTravel = min(northPoleLatTravel, southPoleLatTravel)
-         let tempPolarFLong = f.longitude > 0 ? f.longitude - 180 : f.longitude + 180
-         
-         var polarlongitudeTravel = s.longitude - tempPolarFLong
-         if polarlongitudeTravel > 180 {
-         polarlongitudeTravel -= 360
-         }
-         if polarlongitudeTravel < -180 {
-         polarlongitudeTravel += 360
-         }
-         
-         if abs(polarlongitudeTravel) > 180 {
-         print("There is a faster route")
-         //Go around the other way
-         let sDistance = 180 - abs(s.longitude)
-         let fDistance = 180 - abs(tempPolarFLong)
-         
-         var totalDistance = sDistance + fDistance
-         if longitudeTravel > 0 {
-         totalDistance *= -1
-         }
-         polarlongitudeTravel = totalDistance
-         }
-         
-         let totalTravelPole = sqrt(pow(minPolarLatTravel, 2) + pow(polarlongitudeTravel, 2))
-         
-         if totalTravelPole < totalTravelTraditional {
-         print("Polar travel is faster!")
-         if northPoleLatTravel < southPoleLatTravel {
-         //go over the north pole, positive latitude travel
-         return radiansToDegrees(radians: atan2(minPolarLatTravel, -polarlongitudeTravel))
-         }
-         else {
-         // hop the south pole, negative latitude travel
-         return radiansToDegrees(radians: atan2(minPolarLatTravel * -1, -polarlongitudeTravel))
-         }
-         }*/
-        
-        var result = radiansToDegrees(radians: atan2(latitudeTravel, longitudeTravel))
-        if result < 0 {
-            result += 360
+        else if finalBearing < 0 {
+            finalBearing += 360
         }
-        return result
+        return finalBearing
+    }
+    
+    /// Halfway along the great circle path between two coordinates
+    /// - Parameter f: Origin `GPS`
+    /// - Parameter s: Destination `GPS`
+    /// - Returns: `GPS` of midpoint
+    public static func midpointCoordinate(f: GPS, s: GPS) -> GPS {
+        let bx = myCos(degrees: s.latitude) * myCos(degrees: s.longitude - f.longitude)
+        let by = myCos(degrees: s.latitude) * mySin(degrees: s.longitude - f.longitude)
+        let φ3 = atan2(mySin(degrees: f.latitude) + mySin(degrees: s.latitude), sqrt(pow(myCos(degrees: f.latitude) + bx, 2) + pow(by, 2)))
+        let λ3 = degreesToRadians(degrees: f.longitude) + atan2(by, myCos(degrees: f.latitude) + bx)
+        var lon = radiansToDegrees(radians: λ3)
+        lon = (lon + 540).truncatingRemainder(dividingBy: 360) - 180
+        
+        return GPS(latitude: radiansToDegrees(radians: φ3), longitude: lon)
     }
     
     /// GPS coordinates on the other side of the world. (If you were to dig a hole perfectly straight this is where you would end up)
@@ -240,7 +183,7 @@ public class GPS {
     
     /// Convert decimal format coordinates to degrees, minutes, seconds
     /// - Parameter coordinate: Decimal version of coordinate
-    /// - Returns: Tuple containing degrees minutes and seconds
+    /// - Returns: Tuple containing degrees, minutes, and seconds
     public static func toDegreesMinuteSecond(coordinate:Double) -> (degrees:Double,minutes:Double,seconds:Double) {
         let degrees = floor(coordinate)
         let minutes = floor((coordinate - degrees) * 60)
@@ -256,16 +199,18 @@ public class GPS {
     public static func toDecimal(degrees:Double,minutes:Double,seconds:Double) -> Double {
         return degrees + minutes / 60 + seconds / 3600
     }
-    /// Calculates the distance to the horizon. Doesn't take refraction into account
+    /// Calculates the distance to the horizon.
     /// - Precondition: Planet radius must be in miles
     /// - Parameter atHeight: Height in feet
     /// - Returns: Distance to the horizon (miles)
+    /// - Warning: Doesn't take refraction into account
     public static func distanceToHorizon(atHeight:Double) -> Double {
         return sqrt(2 * planetRadius * atHeight/5280 + pow(atHeight/5280,2))
     }
-    /// Calculates the distance to the horizon. Doesn't take refraction into account
+    /// Calculates the distance to the horizon.
     /// - Precondition: Planet radius must be in kilometers
     /// - Parameter atHeight: Height in meters
+    /// - Warning: Doesn't take refraction into account
     public static func distanceToHorizonMetric(atHeight:Double) -> Double {
         return sqrt(2 * planetRadius * atHeight/1000 + pow(atHeight/1000,2))
     }
@@ -397,9 +342,9 @@ public class GPS {
     }
     
     
-    //============
+    //===================
     // MARK: Math helpers
-    //============
+    //===================
     private static func mySin(degrees: Double) -> Double {
         return __sinpi(degrees/180.0)
     }
@@ -445,6 +390,8 @@ public class GPS {
         case astronomical = 108
     }
     
-    
+    // MARK: Credits
+    // https://www.movable-type.co.uk/scripts/latlong.html
+    // https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html
+    // Almanac for Computers, 1990 sunrise sunset algorithm hosted here: http://edwilliams.org/sunrise_sunset_algorithm.htm
 }
-
