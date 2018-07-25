@@ -2,42 +2,42 @@
   "warnings": [
     {
       "file": "/Users/Aryeh/Downloads/GPS/GPS/Classes/GPS.swift",
-      "line": 13,
+      "line": 16,
       "symbol": "GPS.latitude",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/Aryeh/Downloads/GPS/GPS/Classes/GPS.swift",
-      "line": 14,
+      "line": 17,
       "symbol": "GPS.longitude",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/Aryeh/Downloads/GPS/GPS/Classes/GPS.swift",
-      "line": 86,
+      "line": 92,
       "symbol": "GPS.MAX_LATITUDE",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/Aryeh/Downloads/GPS/GPS/Classes/GPS.swift",
-      "line": 87,
+      "line": 93,
       "symbol": "GPS.MIN_LATITUDE",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/Aryeh/Downloads/GPS/GPS/Classes/GPS.swift",
-      "line": 88,
+      "line": 94,
       "symbol": "GPS.MIN_LONGITUDE",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/Aryeh/Downloads/GPS/GPS/Classes/GPS.swift",
-      "line": 89,
+      "line": 95,
       "symbol": "GPS.MAX_LONGITUDE",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
