@@ -30,6 +30,7 @@ GPS provides a library for performing essential offline tasks involving GPS coor
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
+  s.documentation_url = 'https://arr00.github.io/GPS-pod/'
 
   s.source_files = 'GPS/Classes/**/*'
   
