@@ -73,12 +73,19 @@ public class GPS: CustomStringConvertible {
     public func dayDuration(date:Date, sunZenith:SunZenith) -> Double {
         return GPS.dayDuration(gps: self, date: date, sunZenith: sunZenith)
     }
-    /// Calculate the bearing to another `GPS`
+    /// Calculate the bearing to another `GPS` along the great circle route
     /// - Parameter gps: `GPS` to find the heading to.
     /// - Returns: The bearing to the given `GPS` in degrees. (between 0 and 360)
     public func bearingTo(gps:GPS) -> Double {
         return GPS.bearingBetweenCoordinates(f: self, s: gps)
     }
+    /// Calculate the bearing to another `GPS` along the rhumb line
+    /// - Parameter gps: `GPS` to find the heading to.
+    /// - Returns: The bearing to the given `GPS` in degrees along the rhumb line.
+    public func bearingToRhumb(gps:GPS) -> Double {
+        return GPS.bearingBetweenCoordinatesRhumb(f: self, s: gps)
+    }
+    
     /// Halfway along the great circle path between two coordinates
     /// - Parameter f: Origin `GPS`
     /// - Parameter s: Destination `GPS`
@@ -157,6 +164,24 @@ public class GPS: CustomStringConvertible {
             finalBearing += 360
         }
         return finalBearing
+    }
+    
+    /// Calculate the bearing between two `GPS` along the rhumb line
+    /// - Parameter f: First `GPS` (heading from)
+    /// - Parameter s: Second `GPS` (heading to)
+    /// - Returns: The bearing to the given `GPS` in degrees. (between 0 and 360. 0 is North)
+    public static func bearingBetweenCoordinatesRhumb(f:GPS,s:GPS) -> Double {
+        let e = log(10.0)
+        let numerator = s.longitude - f.longitude
+        
+        
+        let firstTermDenom = ln(tan(Double.pi/2 + s.latitude/2) * pow((1 - e * sin(s.latitude))/(1 + e * sin(s.latitude)), e/2))
+        
+        
+        
+        
+        
+        
     }
     
     /// Halfway along the great circle path between two coordinates
