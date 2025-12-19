@@ -23,7 +23,7 @@ GPS provides an array of static and instance functions. View the [documentation]
 
 ## Author
 
-arr00, aryeh@aryehgreenberg.com
+arr00, arr00@daodudes.com
 
 ## License
 
